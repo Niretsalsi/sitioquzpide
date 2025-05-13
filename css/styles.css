@@ -1,0 +1,150 @@
+/* Cambiar el fondo del navbar a azul y el texto de los enlaces a blanco */
+.custom-navbar {
+  background-color: #2253C5; /* Fondo azul para el navbar */
+}
+
+.custom-navbar .nav-link {
+  color: white; /* Texto blanco por defecto */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado alrededor del texto */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para hover */
+}
+
+/* Cambiar el fondo a blanco y el texto a azul cuando el cursor pasa por encima */
+.custom-navbar .nav-link:hover {
+  background-color: white;
+  color: #2253C5; /* Texto azul */
+}
+
+/* Cambiar el color cuando el enlace está activo (clic) */
+.custom-navbar .nav-link:focus,
+.custom-navbar .nav-link:active {
+  background-color: white;
+  color: #2253C5; /* Texto azul */
+}
+/* Cambiar el color del ícono hamburguesa a blanco */
+.navbar-toggler {
+  border: none; /* Eliminar cualquier borde alrededor del botón */
+  background-color: transparent; /* Fondo transparente para el contorno */
+  border-radius: 10px; /* Bordes redondeados para el fondo cuadrado */
+  padding: 8px; /* Ajustar el espaciado para las líneas */
+}
+
+/* Estilo para las tres líneas dentro del ícono */
+.navbar-toggler-icon {
+  background-color: white; /* Hacer las tres líneas del menú hamburguesa blancas */
+  border: none; /* Eliminar borde de las líneas */
+  border-radius: 5px; /* Bordes redondeados de las líneas */
+}
+
+/* Asegurarse que las líneas del ícono también sean blancas */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  background-color: white; /* Las tres líneas dentro del botón serán blancas */
+  border: none; /* Eliminar cualquier borde de las líneas */
+}
+
+
+
+/* Asegurar que los botones estén en la posición correcta */
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical */
+  background-color: transparent; /* Sin fondo */
+  border: none;
+  z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+}
+
+/* Colocar el botón "Anterior" en el lado izquierdo */
+.carousel-control-prev {
+  left: 10px; /* Pegado al borde izquierdo */
+}
+
+/* Colocar el botón "Siguiente" en el lado derecho */
+.carousel-control-next {
+  right: 10px; /* Pegado al borde derecho */
+}
+
+/* Asegurarnos de que el ícono predeterminado de Bootstrap no se muestre */
+.carousel-control-prev-icon:before, .carousel-control-next-icon:before {
+  content: none; /* Eliminar el ícono predeterminado */
+}
+
+/* Ajustar el tamaño de los íconos SVG a un tamaño adecuado */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 40px; /* Ajusta el tamaño del ícono */
+  height: 40px; /* Ajusta el tamaño del ícono */
+}
+
+/* Efecto hover para los botones cuando el cursor pasa por encima */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: transparent; /* Fondo transparente */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave alrededor */
+  border-radius: 50%; /* Bordes redondeados */
+}
+
+
+
+.cardhome{
+    border: 0.3125rem solid #2253C5; /* Borde azul de 5px (convertido a rem) */
+    border-radius: 15px 15px 0 0; /* Bordes redondeados solo en la parte superior */
+    margin: 1.875rem;/* Margen de 5px (convertido a rem) */
+    overflow: hidden; /* Para que el contenido se ajuste bien dentro */
+    background-color: white; /* Fondo blanco para la card */
+    position: relative; /* Necesario para el rectángulo en la parte inferior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición para efecto de hover */
+  }
+
+/* Estilo del cuerpo de la card */
+.card-body {
+  background-color: rgba(34, 83, 197, 0.5); /* Fondo azul con 50% de transparencia */
+  padding: 20px;
+  color: white; /* Texto blanco */
+  display: flex; /* Activamos flexbox */
+  flex-direction: column; /* Alineamos los elementos en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  z-index: 2;
+}
+
+/* Estilo del botón dentro de la card */
+.card .btn-primary {
+  background-color: #2253C5; /* Color del botón azul */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s ease; /* Transición para hover */
+  border-radius: 20px; /* Bordes redondeados del botón */
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 10px; /* Espaciado arriba del botón */
+}
+
+/* Efecto hover en el botón */
+.card .btn-primary:hover {
+  background-color: #1a3a9b; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Estilo del rectángulo en la parte inferior de la card */
+.card::after {
+  content: ''; /* Creamos el pseudo-elemento */
+  position: absolute; /* Posición absoluta */
+  bottom: -5px; /* Lo posicionamos justo debajo de la card */
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho de la card */
+  height: 5px; /* Delgado */
+  background: linear-gradient(to right, #ffcc00, transparent); /* Degradado de amarillo a transparente */
+  z-index: 2; /* Asegura que el rectángulo esté por encima del contenido */
+}
+.contenido-principal{
+  display: flex; /* Activamos Flexbox */
+  flex-wrap: wrap; /* Permite que las cards se ajusten en filas cuando no haya suficiente espacio */
+  justify-content: center; /* Centra las cards horizontalmente */
+  align-items: center; /* Centra las cards verticalmente */
+  gap: 20px; /* Espaciado entre las cards */
+  padding: 20px; /* Espaciado interno de la sección */
+}
+.card-text{
+  text-align: center;
+}
