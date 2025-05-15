@@ -5,6 +5,7 @@
 
 .custom-navbar .nav-link {
   color: white; /* Texto blanco por defecto */
+  font-size: 1.5625rem;
   border-radius: 20px; /* Bordes redondeados */
   padding: 10px 15px; /* Espaciado alrededor del texto */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para hover */
@@ -22,12 +23,15 @@
   background-color: white;
   color: #2253C5; /* Texto azul */
 }
+
+
 /* Cambiar el color del ícono hamburguesa a blanco */
 .navbar-toggler {
   border: none; /* Eliminar cualquier borde alrededor del botón */
   background-color: transparent; /* Fondo transparente para el contorno */
-  border-radius: 10px; /* Bordes redondeados para el fondo cuadrado */
+ 
   padding: 8px; /* Ajustar el espaciado para las líneas */
+
 }
 
 /* Estilo para las tres líneas dentro del ícono */
@@ -35,8 +39,14 @@
   background-color: white; /* Hacer las tres líneas del menú hamburguesa blancas */
   border: none; /* Eliminar borde de las líneas */
   border-radius: 5px; /* Bordes redondeados de las líneas */
-}
+  /* 1. Ancho y alto explícito */
+  width: 3.125rem;
+  height: 3.125rem;
 
+  /* 2. Escalamos el fondo SVG al 100% de nuestra caja */
+  background-size: 3.125rem 3.125rem !important;
+
+}
 /* Asegurarse que las líneas del ícono también sean blancas */
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after,
@@ -100,6 +110,28 @@
     transition: transform 0.3s ease; /* Transición para efecto de hover */
      border-bottom: none; /* Quitamos el borde de abajo */
   }
+
+  
+.cardhome p {
+  font-size: 1.25rem
+}
+.cardhome h5 {
+  font-size: 1.875rem;
+}
+
+.custom-size {
+  /* Ajusta el padding para agrandar o achicar el área clicable */
+  padding:5px  5px;
+  /* Cambia el tamaño de la letra */
+  font-size: 1.125rem; /* 18px aproximadamente */
+
+  /* Opcional: fijas un ancho/alto */
+  width:6.25rem;
+  height: auto;
+
+  /* Opcional: redondeo de bordes distinto */
+  border-radius: 0.5rem;
+}
   .cardhome::after {
   content: "";
   position: absolute;
@@ -159,21 +191,27 @@
 }
 .card-text{
   text-align: center;
+
 }
 
+.card-title{
+ text-align: center;
+}
 /* Estilo PAGINA NOSOTROS */
 
 
 .card-nosotros {
+  
   display: grid;
   grid-template-columns: 2fr 1fr;           /* Dos columnas: texto / imagen */
-  gap: 1rem;                                /* Espacio entre columnas */
+  gap:2rem;                                /* Espacio entre columnas */
   border: 0.25rem solid #000;               /* Borde negro */
   border-radius: 1rem;                      /* Esquinas redondeadas */
   padding: 1rem;                            /* Relleno interno */
-  max-width: 800px;                         /* Ancho máximo */
-  margin: 2rem auto;                        /* Centrado horizontal */
-  background-color: #0a1b45;                   /* Fondo blanco */
+ max-width: 800px;
+  margin: 1.25rem auto;    /* top/bottom 1rem, left/right auto para centrar */
+  background-color: #0a1b45;       
+  justify-items: center;            /* Fondo blanco */
 
   grid-template-areas: 
     "contenido imagen";
@@ -184,12 +222,14 @@
   grid-area: contenido;                     /* Mapea a la primera área */
   display: flex;
   flex-direction: column;
-  justify-content: center;                  /* Centra verticalmente */
+  justify-content: center;     
+    align-items: center;       /* centra horizontalmente los hijos */
+  text-align: center;               /* Centra verticalmente */
 }
 
 .card-nosotros__contenido h2 {
-  margin: 0 0 0.5rem;
-  font-size: 2rem;
+  margin: 0 0 1.25rem;
+  font-size: 2.5rem;
    color: #ffffff;
 }
 
@@ -197,6 +237,7 @@
   margin: 0;
   line-height: 1.5;
   color: #ffffff;
+  text-align: justify;
 }
 
 /* Zona de imagen */
@@ -204,7 +245,11 @@
   grid-area: imagen;                        /* Mapea a la segunda área */
   display: flex;
   align-items: center;
-  justify-content: center;                  /* Centra la imagen */
+  justify-content: center;     
+  width: 9.375rem;
+  height: auto;     
+  width: auto;
+  max-width: 9.375rem;        /* Centra la imagen */
 }
 
 .card-nosotros__imagen img {
@@ -221,6 +266,9 @@
     grid-template-areas:
       "contenido"
       "imagen";
+        margin: 1rem .625rem;    /* 1rem arriba/abajo, centrado horizontal */
+    padding: 0 1rem; 
+    gap: .625rem; 
   }
   .card-nosotros__imagen {
     margin-top: 1rem;
@@ -254,13 +302,13 @@ flex-wrap: wrap;
 }
 
 .card-marketing .card-title {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   margin: 0.5rem 0;
   color: #007bff;
 }
 
 .card-marketing .card-intro {
-  font-size: 0.95rem;
+  font-size: 1.3125rem;
   color: #333;
   margin-bottom: 1rem;
 }
