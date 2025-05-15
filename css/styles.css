@@ -232,8 +232,10 @@
 
 .cardsservicios{
 
-
-display: inline-block; 
+display:inline-flex;
+gap: 1.25rem;
+margin: 20px 20px;
+flex-wrap: wrap;
 }
 .card-marketing {
   width: 20rem;
