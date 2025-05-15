@@ -1,6 +1,7 @@
 /* Cambiar el fondo del navbar a azul y el texto de los enlaces a blanco */
 .custom-navbar {
   background-color: #2253C5; /* Fondo azul para el navbar */
+
 }
 
 .custom-navbar .nav-link {
@@ -44,7 +45,6 @@
   height: 3.125rem;
 
   /* 2. Escalamos el fondo SVG al 100% de nuestra caja */
-  background-size: 3.125rem 3.125rem !important;
 
 }
 /* Asegurarse que las líneas del ícono también sean blancas */
@@ -102,22 +102,18 @@
   border-left: 2px solid blue;
   border-right: 2px solid blue;
     border-radius: 15px 15px 0 0; /* Bordes redondeados solo en la parte superior */
-    margin: 1.875rem;/* Margen de 5px (convertido a rem) */
+    margin: .3125rem;/* Margen de 5px (convertido a rem) */
     overflow: hidden; /* Para que el contenido se ajuste bien dentro */
     background-color: white; /* Fondo blanco para la card */
     position: relative; /* Necesario para el rectángulo en la parte inferior */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: transform 0.3s ease; /* Transición para efecto de hover */
      border-bottom: none; /* Quitamos el borde de abajo */
+    
   }
 
   
-.cardhome p {
-  font-size: 1.25rem
-}
-.cardhome h5 {
-  font-size: 1.875rem;
-}
+
 
 .custom-size {
   /* Ajusta el padding para agrandar o achicar el área clicable */
@@ -191,12 +187,20 @@
 }
 .card-text{
   text-align: center;
+  font-size: 1.75rem;
 
-}
-
-.card-title{
+}.card-title{
  text-align: center;
+ font-size: 2.375rem;;
 }
+/*mediaqueri card movil */
+.cardhome {
+  width: calc(100vw - 2rem); /* deja 1rem a cada lado */
+  margin: .625rem auto;
+}
+
+
+
 /* Estilo PAGINA NOSOTROS */
 
 
@@ -259,21 +263,7 @@
   border-radius: 0.5rem;
 }
 
-/* Responsive: apilar en móvil */
-@media (max-width: 600px) {
-  .card-nosotros {
-    grid-template-columns: 1fr;             /* Una sola columna */
-    grid-template-areas:
-      "contenido"
-      "imagen";
-        margin: 1rem .625rem;    /* 1rem arriba/abajo, centrado horizontal */
-    padding: 0 1rem; 
-    gap: .625rem; 
-  }
-  .card-nosotros__imagen {
-    margin-top: 1rem;
-  }
-}
+
 
 
 /* Card servicios */
@@ -302,13 +292,13 @@ flex-wrap: wrap;
 }
 
 .card-marketing .card-title {
-  font-size: 1.875rem;
+  font-size: 2.375rem;
   margin: 0.5rem 0;
   color: #007bff;
 }
 
 .card-marketing .card-intro {
-  font-size: 1.3125rem;
+  font-size: 1.75rem;
   color: #333;
   margin-bottom: 1rem;
 }
@@ -329,3 +319,26 @@ flex-wrap: wrap;
   font-size: 0.9rem;
 }
 
+/* Responsive: apilar en móvil */
+@media (max-width: 600px) {
+  .card-nosotros {
+    grid-template-columns: 1fr;             /* Una sola columna */
+    grid-template-areas:
+      "contenido"
+      "imagen";
+        margin: 1rem .625rem;    /* 1rem arriba/abajo, centrado horizontal */
+    padding: 0 1rem; 
+    gap: .625rem; 
+  }
+  .card-nosotros__imagen {
+    margin-top: 1rem;
+  }
+}
+
+/*mediaqueri card servicios movil */
+@media (max-width: 576px) {
+  .cardsservicios .card-marketing {
+    flex: 0 1 100%;      /* 1 card por fila, con margen lateral */
+    max-width: 100%;
+     }
+}
