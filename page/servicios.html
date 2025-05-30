@@ -16,45 +16,37 @@
     crossorigin="anonymous"
   >
 
-   <!-- 2) Tu CSS personalizado -->
+   <!-- CSS  -->
   <link rel="stylesheet" href="../css/styles.css">
 
 </head>
-
-<body>
-  <!-- Navegación -->
-  <nav class="navbar navbar-expand-lg custom-navbar">
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">
-        <img src="../assets/icono-logo.svg" alt="Logo" width="50" height="auto">
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+          <img class="logo-icon" src="../assets/icono-logo.png" alt="Marca Quizpide">
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false"
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="quienessomos.html">Nosotros</a>
+      <div class="collapse navbar-collapse justify-content-center"  id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item me-5">
+            <a class="nav-link" href="quienessomos.html">Quienes somos</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-5">
             <a class="nav-link" href="#">Servicios</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contactos</a>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="contacto.html">Contancto</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+<body>
+  
 
   <!-- Card serivcios -->
 <section  id="servicesAccordion" class="cardsservicios row g-4">
@@ -71,7 +63,8 @@
     <h3 class="card-title">Mercadotecnia</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
+     Estrategias y acciones para conectar con tus clientes, 
+     aumentar la visibilidad de tu marca e incrementar tus ventas.
     </p>
 
     <button
@@ -87,12 +80,12 @@
 
     <div class="collapse mt-2" id="servicesList1"  data-bs-parent="#servicesAccordion">
       <ul class="services-list1">
-        <li>Estrategias de venta</li>
-        <li>Análisis de competidores</li>
-        <li>Plan de negocios</li>
-        <li>Análisis foda</li>
-        <li>Investigación de mercado</li>
-        <li>focus group</li>
+        <li>ESTRATEGIA DE VENTA</li>
+        <li>ANALISIS DE COMPETIDORES</li>
+        <li>PLAN DE NEGOCIOS</li>
+        <li>ANALISIS FODA</li>
+        <li>INVESTIGACIÓN DE MERCADO</li>
+        <li>FOCUS GROUP</li>
         
       </ul>
     </div>
@@ -109,7 +102,8 @@
     <h3 class="card-title">Marketing digital</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
+     Estrategias para promocionar tu marca en internet, llegar a más clientes, 
+     aumentar tus ventas y crecer en el mundo digital.
     </p>
 
     <button
@@ -147,7 +141,9 @@
     <h3 class="card-title">Publicidad</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
+   Acciones efectivas para dar a conocer tu marca a 
+   más personas, usando diferentes canales para 
+  al público adecuado.
     </p>
 
     <button
@@ -178,12 +174,14 @@
 
  
     <div class="card-icon">
-      <img src="../assets/imagen1.jpg" alt="Icono de mercadotecnia"> </div>
+      <img src="../assets/identidad.png" alt="Icono de mercadotecnia"> </div>
 
     <h3 class="card-title">Identidad Corporativa</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
+  Elementos que mejoran la personalidad de tu marca, para desarrollar 
+  una imagen profesional y atractiva, haciéndola 
+  diferente de tu competencia y generando mayor confianza a tus clientes.
     </p>
 
     <button
@@ -204,7 +202,7 @@
         <li>Catálogo de servicios</li>
         <li>Diseño del punto de venta</li>
         <li>Papelería administrativa</li>
-        <li>Credenciales/li>
+        <li>Credenciales</li>
         <li>Uniformes</li>
         <li>Rotulación de vehículos</li>
         <li>Envases y empaques</li>
@@ -221,11 +219,12 @@
     <div class="card-icon">
       <img src="../assets/btl1.jpg" alt="Icono de mercadotecnia"> </div>
 
-    <h3 class="card-title">BELOW THE LINE (BTL)</h3>
+    <h3 class="card-title">Publicidad BTL
+</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
-    </p>
+      Estrategias de marketing directas e interactivas, con alto grado de 
+      creatividad, que impactan fuertemente en el público objetivo y dejan huella.
 
     <button
       class="btn btn-primary custom-size"
@@ -260,7 +259,8 @@
     <h3 class="card-title">Producción e impresión</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
+   Materiales gráficos que plasman la personalidad de tu marca 
+   mediante distintos tipos de técnicas de impresión y rotulación.
     </p>
 
     <button
@@ -291,18 +291,20 @@ folders, calcomanías y más)</li>
   </div>
   </div>
 
-   <!-- Empieza columna APOYOS PARA EVENTOS 
+
+   <!-- Empieza columna apoyo para eventos -->
 <div class="col-12 col-md-4">
  <div class="card-servicio">
 
  
     <div class="card-icon">
-      <img src="../assets/marketing.gif" alt="Icono de mercadotecnia"> </div>
+      <img src="../assets/apoyo.png" alt="Icono de apoyo para eventos"> </div>
 
     <h3 class="card-title">Apoyo para eventos</h3>
 
     <p class="card-intro">
-      Descubre cómo podemos convertir tus objetivos en resultados medibles y da el primer paso hacia el éxito hoy mismo.
+   Materiales gráficos que plasman la personalidad de tu marca 
+   mediante distintos tipos de técnicas de impresión y rotulación.
     </p>
 
     <button
@@ -316,6 +318,17 @@ folders, calcomanías y más)</li>
       Ver más
     </button>
 
+    <div class="collapse mt-2" id="servicesList7"  data-bs-parent="#servicesAccordion">
+      <ul class="services-list7">
+        <li>Stands</li>
+        <li>Banners y rollups</li>
+        <li>artículos promocionales</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+ <!-- 
     <div class="collapse mt-2" id="servicesList7" data-bs-parent="#servicesAccordion">
       <ul class="services-list7">
         <li>Stands</li>
@@ -326,7 +339,11 @@ folders, calcomanías y más)</li>
   </div>
   </div>
 -->
-
+<div class="seccionfooter">
+ <a href="terminos.html"> <button class="terminos">
+    Términos y condiciones
+  </button></a>
+</div>
 </section>
   <!-- 3) Bootstrap Bundle JS (Popper + Collapse) -->
   <script

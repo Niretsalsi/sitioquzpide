@@ -1,63 +1,57 @@
-/* Cambiar el fondo del navbar a azul y el texto de los enlaces a blanco */
-.custom-navbar {
-  background-color: #2253C5; /* Fondo azul para el navbar */
+/*sección navbar*/
 
+
+body {
+  padding-top: 56px; /* o la altura real de tu navbar */
+}
+nav.navbar.custom-navbar {
+  background-color: #0d38a6 !important;
 }
 
-.custom-navbar .nav-link {
-  color: white; /* Texto blanco por defecto */
-  font-size: 1.5625rem;
-  border-radius: 20px; /* Bordes redondeados */
-  padding: 10px 15px; /* Espaciado alrededor del texto */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para hover */
+.nav-link {
+  color: #fff !important;                         /* color por defecto */
+  padding: 0.25rem 0.5rem;                /* espacio interno */
+  border-radius: 0.25rem;                 /* esquinas redondeadas */
+  transition:                             
+  color 0.2s ease,                     /* transición suave de color */
+  background-color 0.2s ease;
+    font-size: 1.5rem;
 }
-
-/* Cambiar el fondo a blanco y el texto a azul cuando el cursor pasa por encima */
 .custom-navbar .nav-link:hover {
-  background-color: white;
-  color: #2253C5; /* Texto azul */
+  color: #0a1b45 !important;              /* nuevo color de texto */
+  background-color: rgba(255,255,255,0.9) !important; /* nuevo fondo */
+}
+.logo-icon {
+  width: 3.75rem;    /* ancho fijo */
+  height: auto; }
+
+.custom-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+.custom-navbar .navbar-toggler {
+  border: none !important;
+  background-color: transparent !important;
+  margin: 0;              /* elimina márgenes extra */
+  padding: 0.25rem 0.75rem;/* opcional: ajusta el padding a tu gusto */
 }
 
-/* Cambiar el color cuando el enlace está activo (clic) */
-.custom-navbar .nav-link:focus,
-.custom-navbar .nav-link:active {
-  background-color: white;
-  color: #2253C5; /* Texto azul */
+/* 2) Quita el outline/box-shadow al hacer foco */
+.custom-navbar .navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-
-/* Cambiar el color del ícono hamburguesa a blanco */
-.navbar-toggler {
-  border: none; /* Eliminar cualquier borde alrededor del botón */
-  background-color: transparent; /* Fondo transparente para el contorno */
- 
-  padding: 8px; /* Ajustar el espaciado para las líneas */
-
+/* 3) Asegúrate de estar usando la versión blanca del ícono */
+.custom-navbar.navbar-dark .navbar-toggler-icon {
+  /* esta es la versión SVG en blanco de Bootstrap 5 */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-color: transparent !important;
 }
-
-/* Estilo para las tres líneas dentro del ícono */
-.navbar-toggler-icon {
-  background-color: white; /* Hacer las tres líneas del menú hamburguesa blancas */
-  border: none; /* Eliminar borde de las líneas */
-  border-radius: 5px; /* Bordes redondeados de las líneas */
-  /* 1. Ancho y alto explícito */
-  width: 3.125rem;
-  height: 3.125rem;
-
-  /* 2. Escalamos el fondo SVG al 100% de nuestra caja */
-
-}
-/* Asegurarse que las líneas del ícono también sean blancas */
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after,
-.navbar-toggler-icon div {
-  background-color: white; /* Las tres líneas dentro del botón serán blancas */
-  border: none; /* Eliminar cualquier borde de las líneas */
-}
+/* aqui termina el nav */
 
 
 
-/* Asegurar que los botones estén en la posición correcta */
+
 .carousel-control-prev, .carousel-control-next {
   position: absolute;
   top: 50%;
@@ -98,10 +92,8 @@
 
 
 .cardhome{
-  border-top: 2px solid blue;
-  border-left: 2px solid blue;
-  border-right: 2px solid blue;
-    border-radius: 15px 15px 0 0; /* Bordes redondeados solo en la parte superior */
+
+    border-radius: 1.875rem 1.875rem 0 0; /* Bordes redondeados solo en la parte superior */
     margin: .3125rem;/* Margen de 5px (convertido a rem) */
     overflow: hidden; /* Para que el contenido se ajuste bien dentro */
     background-color: white; /* Fondo blanco para la card */
@@ -140,7 +132,7 @@
 
 /* Estilo del cuerpo de la card */
 .card-body {
-  background-color: rgba(34, 83, 197, 0.5); /* Fondo azul con 50% de transparencia */
+  background-color:  #0a1b45;
   padding: 20px;
   color: white; /* Texto blanco */
   display: flex; /* Activamos flexbox */
@@ -187,11 +179,13 @@
 }
 .card-text{
   text-align: center;
-  font-size: 1.75rem;
+  font-size:1.2rem;
+
 
 }.card-title{
  text-align: center;
- font-size: 2.375rem;;
+ font-size: 1.5rem;
+ color: #ffcc00;
 }
 /*mediaqueri card movil */
 .cardhome {
@@ -200,7 +194,103 @@
 }
 
 
+/* seccion promocionales */
 
+h1{
+   text-align: center;
+ font-size: 1.5rem;
+ color: #007bff;
+ margin: .625rem .625rem;
+ padding: .625rem .625rem;
+ border-radius: .9375rem;
+ width: auto;
+}
+.card-hogar {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: .9375rem;
+  padding: .625rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  
+  height: 100%;
+  margin: .3125rem .3125rem;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.card-hogar:hover {
+  border-color: #007bff;
+}
+
+.card-hogar .card-icon img {
+  width: 18.75rem;
+  height: auto;
+  margin: 0 auto 5px;
+
+}
+
+.card-hogar .card-title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: #007bff;
+}
+
+.card-hogar .card-intro {
+  font-size: 15px;
+  color: #333;
+  margin: 1.25rem;
+  text-align: center;
+  padding: .3125rem;
+  
+}
+
+.card-Hogar .btn {
+  margin-bottom: 0.5rem;
+}
+
+.services-list1 {
+  list-style: disc inside;
+  text-align: left;
+  margin-top: 0.5rem;
+  padding-left: 0; /* ya lo maneja `inside` */
+  color: #007bff;
+  
+}
+
+.services-list1 li {
+  background-color: #007bff;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
+}
+
+
+/* Terminos */
+.seccionfooter .terminos{
+  display: block;    /* lo hace bloque y salta línea */
+  width: 100%;       /* ocupa todo el ancho disponible */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  /* opcional: si quieres que luzca como Bootstrap */
+  background-color: #0a1b45;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+.seccionfooter .terminos:hover {
+  background-color: #fff;
+  color: #0a1b45;
+  border: 1px solid #0a1b45;
+}
+a {
+  text-decoration: none;
+}
 /* Estilo PAGINA NOSOTROS */
 
 
@@ -302,22 +392,82 @@
   font-size: 1.75rem;
   color: #333;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card-servicio .btn {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.services-list {
+.services-list1 {
   list-style: disc inside;
   text-align: left;
   margin-top: 0.5rem;
   padding-left: 0; /* ya lo maneja `inside` */
+  color: #007bff;
+  
 }
-
-.services-list li {
+.services-list2 {
+  list-style: disc inside;
+  text-align: left;
+  margin-top: 0.5rem;
+  padding-left: 0; /* ya lo maneja `inside` */
+  color: #007bff;
+  
+}
+.services-list2 li {
+  background-color: #007bff;
   margin: 0.35rem 0;
   font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
+}
+
+.services-list3 li {
+  list-style: disc inside;
+  background-color: #007bff;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
+}
+.services-list4 li {
+  list-style: disc inside;
+  background-color: #007bff;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
+}
+.services-list5 li {
+  list-style: disc inside;
+  background-color: #007bff;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
+}
+.services-list6 li {
+  list-style: disc inside;
+  background-color: #007bff;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
+}
+.services-list7 li {
+  list-style: disc inside;
+  background-color: #007bff;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: .625rem .625rem;
+  
 }
 
 /* Responsive: apilar en móvil */
@@ -355,4 +505,60 @@
 .card-servicio .btn {
   /* nunca menos de 0.875rem, ideal 2vw, máximo 1rem */
   font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+
+.quzpide-cards {
+  display: grid;
+  /* Una sola columna que ocupa todo el ancho disponible */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;      /* para que no se estiren verticalmente */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  color: #005689;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .quzpide-cards {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .card h2 {
+    font-size: 1.1rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
 }
