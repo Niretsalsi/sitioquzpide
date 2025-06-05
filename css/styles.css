@@ -1,9 +1,6 @@
 /*sección navbar*/
 
 
-body {
-  padding-top: 56px; /* o la altura real de tu navbar */
-}
 nav.navbar.custom-navbar {
   background-color: #0d38a6 !important;
 }
@@ -170,12 +167,11 @@ nav.navbar.custom-navbar {
   z-index: 2; /* Asegura que el rectángulo esté por encima del contenido */
 }
 .contenido-principal{
-  display: flex; /* Activamos Flexbox */
-  flex-wrap: wrap; /* Permite que las cards se ajusten en filas cuando no haya suficiente espacio */
-  justify-content: center; /* Centra las cards horizontalmente */
-  align-items: center; /* Centra las cards verticalmente */
-  gap: 20px; /* Espaciado entre las cards */
-  padding: 20px; /* Espaciado interno de la sección */
+ display: flex;
+  justify-content: center;    /* Centra las cards horizontalmente */
+  gap: 2rem;                  /* Espacio entre las cards (ajusta a tu gusto) */
+  flex-wrap: wrap;            /* Permite que bajen a otra línea si hay muchas o en responsive */
+  margin-top: 2rem;
 }
 .card-text{
   text-align: center;
@@ -187,11 +183,7 @@ nav.navbar.custom-navbar {
  font-size: 1.5rem;
  color: #ffcc00;
 }
-/*mediaqueri card movil */
-.cardhome {
-  width: calc(100vw - 2rem); /* deja 1rem a cada lado */
-  margin: .625rem auto;
-}
+
 
 
 /* seccion promocionales */
@@ -270,30 +262,99 @@ h1{
 
 
 /* Terminos */
-.seccionfooter .terminos{
-  display: block;    /* lo hace bloque y salta línea */
-  width: 100%;       /* ocupa todo el ancho disponible */
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  /* opcional: si quieres que luzca como Bootstrap */
-  background-color: #0a1b45;
-  color: #fff;
-  border: none;
-  border-radius: 0.25rem;
+
+
+.textosfinales{
+ color: #0a1b45;
   text-align: center;
-  cursor: pointer;
 }
-.seccionfooter .terminos:hover {
-  background-color: #fff;
+
+.textosfinales h3{
+  border-radius: .9375rem;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffcc00;
+  padding: .625rem;
+ font-size: 1.25rem;
+ color:#0a1b45;}
+
+.textosfinales h4{
   color: #0a1b45;
-  border: 1px solid #0a1b45;
+ font-size: .9375rem
+
 }
-a {
+
+.seccionfooter {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* tres columnas */
+  align-items: center;
+  background: #0a1b45;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 1.5rem;
+}
+
+.footer-contacto {
+  justify-self: start;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.15rem;
+}
+.footer-creditos {
+  justify-self: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.terminos {
+  justify-self: end;
+  border: 1.5px solid #fff;
+  color: #fff;
+  border-radius: 2em;
+  background: transparent;
+  font-size: 1.1rem;
   text-decoration: none;
+  padding: 0.5em 2em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  display: inline-block;
+  outline: none;
 }
-/* Estilo PAGINA NOSOTROS */
+.terminos:hover,
+.terminos:focus {
+  background: #fff;
+  color: #0a1b45;
+  border: 1.5px solid #0a1b45;
+}
 
-
+/* Responsive: en móvil todo en columna centrado */
+@media (max-width: 800px) {
+  .seccionfooter {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.7rem;
+    padding: 1.2rem 0.5rem;
+    text-align: center;
+  }
+  .footer-contacto,
+  .footer-creditos,
+  .terminos {
+    justify-self: center;
+  }
+  .footer-contacto {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.card-nosotros {
+ display: grid;
+  /* Centra todos los items hija en horizontal y vertical */
+  place-items: center;     /* equivale a: align-items:center; justify-items:center; */
+  
+  /* Para que ocupe toda la ventana, de modo que la tarjeta quede realmente en el medio */
+  min-height: 100vh;  }
 .card-nosotros {
   
   display: grid;
@@ -302,8 +363,8 @@ a {
   border: 0.25rem solid #000;               /* Borde negro */
   border-radius: 1rem;                      /* Esquinas redondeadas */
   padding: 1rem;                            /* Relleno interno */
- max-width: 800px;
-  margin: 1.25rem auto;    /* top/bottom 1rem, left/right auto para centrar */
+   max-width: 800px;
+  margin: 1.875rem auto;    /* top/bottom 1rem, left/right auto para centrar */
   background-color: #0a1b45;       
   justify-items: center;            /* Fondo blanco */
 
@@ -561,4 +622,34 @@ a {
   .card p {
     font-size: 0.9rem;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cardsservicios ul li {
+  text-transform: uppercase;
+  /* Puedes agregar otros estilos si quieres */
 }
