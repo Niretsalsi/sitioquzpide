@@ -1,5 +1,7 @@
 /*sección navbar*/
-
+body {
+  padding-top: 5rem; /* o la altura que tenga realmente tu navbar */
+}
 
 nav.navbar.custom-navbar {
   background-color: #0d38a6 !important;
@@ -348,6 +350,24 @@ h1{
     gap: 0.5rem;
   }
 }
+
+.btn-contacto.whatsapp {
+color: #ddd;
+    text-decoration: none;
+}
+
+/* Si deseas un fondo azul o gris para el teléfono */
+.btn-contacto.telefono {
+color: #fff;
+    text-decoration: none;
+}
+.btn-contacto:hover {
+  border-radius: .9375rem;
+  padding: .3125rem;
+  background-color: #007bff;
+  color: #ffffff; /* texto azul al hover */
+  /* o color: #25D366;  para texto verde */
+}
 .card-nosotros {
  display: grid;
   /* Centra todos los items hija en horizontal y vertical */
@@ -652,4 +672,12 @@ h1{
 .cardsservicios ul li {
   text-transform: uppercase;
   /* Puedes agregar otros estilos si quieres */
+}
+.services-list6 li {
+  text-transform: uppercase;
+}
+
+/* Anulamos la transformación solo para el span que contiene el texto entre paréntesis */
+.services-list6 li .no-transform {
+  text-transform: none;
 }
