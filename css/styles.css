@@ -1,6 +1,6 @@
 /*sección navbar*/
 body {
-  padding-top: 5rem; /* o la altura que tenga realmente tu navbar */
+  padding-top: 80px; /* o la altura que tenga realmente tu navbar */
 }
 
 nav.navbar.custom-navbar {
@@ -368,6 +368,27 @@ color: #fff;
   color: #ffffff; /* texto azul al hover */
   /* o color: #25D366;  para texto verde */
 }
+
+
+.direccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 1.5rem 1.5rem;
+  gap: 0.5rem; /* espacio entre icono y texto */
+}
+
+.dire {
+  color: #273280;; /* NARANJA o el color que prefieras */
+  font-size: 1.3rem;
+}
+
+.texto-direccion {
+  color: #273280;  /* AZUL o el color que prefieras */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
 .card-nosotros {
  display: grid;
   /* Centra todos los items hija en horizontal y vertical */
