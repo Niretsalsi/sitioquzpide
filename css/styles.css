@@ -47,48 +47,41 @@ nav.navbar.custom-navbar {
   background-color: transparent !important;
 }
 /* aqui termina el nav */
+.solo-gif-slider {
+  position: relative;
+  overflow: hidden;
+}
 
+.solo-gif-slider .solo-gif {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-
-
-.carousel-control-prev, .carousel-control-next {
+.solo-gif-slider .gif-caption {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* Centrado vertical */
-  background-color: transparent; /* Sin fondo */
-  border: none;
-  z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+  bottom: 1rem;           /* ajusta altura del texto */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4); /* semitransparente para legibilidad */
+  border-radius: 0.25rem;
 }
 
-/* Colocar el botón "Anterior" en el lado izquierdo */
-.carousel-control-prev {
-  left: 10px; /* Pegado al borde izquierdo */
+.solo-gif-slider .gif-caption h5 {
+  margin: 0 0 0.25rem;
 }
 
-/* Colocar el botón "Siguiente" en el lado derecho */
-.carousel-control-next {
-  right: 10px; /* Pegado al borde derecho */
+.solo-gif-slider .gif-caption p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
-/* Asegurarnos de que el ícono predeterminado de Bootstrap no se muestre */
-.carousel-control-prev-icon:before, .carousel-control-next-icon:before {
-  content: none; /* Eliminar el ícono predeterminado */
+.quinessomos{
+  background-color: #0a1b45;
 }
-
-/* Ajustar el tamaño de los íconos SVG a un tamaño adecuado */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  width: 40px; /* Ajusta el tamaño del ícono */
-  height: 40px; /* Ajusta el tamaño del ícono */
-}
-
-/* Efecto hover para los botones cuando el cursor pasa por encima */
-.carousel-control-prev:hover, .carousel-control-next:hover {
-  background-color: transparent; /* Fondo transparente */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave alrededor */
-  border-radius: 50%; /* Bordes redondeados */
-}
-
-
 
 .cardhome{
 
@@ -262,44 +255,146 @@ h1{
   
 }
 
+:root {
+  --color-cuspide-blue: #0886f7;
+  --logo-max-width: 120px;
+  --logo-max-height: 75px;
+}
+
+/* Banner de logos */
+.banner-clientes {
+  display: flex;
+  max-width: 100%;
+  margin: 1.5rem .625rem;
+
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(30,30,60,0.08);
+  background: #fff;
+}
+.banner-texto {
+  flex: 1;
+  padding: 2rem;
+  background: var(--color-cuspide-blue);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 250px;
+}
+.banner-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.banner-texto p {
+  font-size: 1.1rem;
+}
+
+/* Animación logos */
+.banner-logos {
+  flex: 2;
+  position: relative;
+  min-height: 170px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-group {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.logo-group.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.logo-group img {
+  max-width: var(--logo-max-width);
+  max-height: var(--logo-max-height);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 8px 0 rgba(30,30,60,0.06);
+  padding: .25rem .75rem;
+  margin: 0 .2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Terminos */
 
 
-.textosfinales{
- color: #0a1b45;
-  text-align: center;
-}
 
-.textosfinales h3{
-  border-radius: .9375rem;
-  text-align: center;
-  display: inline-block;
-  background-color: #ffcc00;
-  padding: .625rem;
- font-size: 1.25rem;
- color:#0a1b45;}
-
-.textosfinales h4{
-  color: #0a1b45;
- font-size: .9375rem
-
-}
 
 .seccionfooter {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* tres columnas */
-  align-items: center;
+  display: flex;                     /* 1. Flexbox */
+  justify-content: space-evenly;     /* 2. Espacios iguales entre items */
+  align-items: center;               /* 3. Alineación vertical */
   background: #0a1b45;
   color: #fff;
   padding: 1.2rem 2rem;
-  width: 100%;
   box-sizing: border-box;
-  gap: 1.5rem;
+  /* eliminamos grid-template-columns y gap */
 }
 
+
+
 .footer-contacto {
-  justify-self: start;
+  justify-self: center;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -311,6 +406,67 @@ h1{
   font-size: 1.2rem;
   font-weight: normal;
 }
+
+
+.link-footer-extra {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid yellow;       /* 👈 ¡Aquí está el cambio importante! */
+  border-radius: 1.5em;
+  padding: 0.5em 1.2em;
+  background: transparent;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.footer-info-extra .restricciones {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+
+.link-footer-extra {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+
+  border-radius: 1.5em;
+  padding: 0.5em 1.2em;
+  background: transparent;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-footer-extra:hover,
+.link-footer-extra:focus {
+  background: yellow;
+  color: #0a1b45; /* azul oscuro */
+  border-color: yellow;
+}
+
+/* Opcional: ajustar tipografía interna */
+.link-footer-extra .atencion {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.link-footer-extra .restricciones {
+  font-size: 8¿.5625rem;
+  opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+
+
+
 .terminos {
   justify-self: end;
   border: 1.5px solid #fff;
@@ -389,6 +545,14 @@ color: #fff;
   font-weight: 500;
 }
 
+
+
+
+
+
+.fondoquienesomos{
+  background-color: #0a1b45;
+}
 .card-nosotros {
  display: grid;
   /* Centra todos los items hija en horizontal y vertical */
@@ -401,7 +565,7 @@ color: #fff;
   display: grid;
   grid-template-columns: 2fr 1fr;           /* Dos columnas: texto / imagen */
   gap:2rem;                                /* Espacio entre columnas */
-  border: 0.25rem solid #000;               /* Borde negro */
+             /* Borde negro */
   border-radius: 1rem;                      /* Esquinas redondeadas */
   padding: 1rem;                            /* Relleno interno */
    max-width: 800px;
@@ -610,6 +774,31 @@ color: #fff;
 }
 
 
+
+
+/* CSS */
+.valores-quzpide {
+  background: #fff; /* fondo blanco */
+}
+.valor-item .icono {
+  color: var(--color-cuspide-blue); /* azul Quzpide */
+}
+.valor-titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #0a1b45;
+}
+.valor-texto {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+
+
+
 .quzpide-cards {
   display: grid;
   /* Una sola columna que ocupa todo el ancho disponible */
@@ -678,15 +867,6 @@ color: #fff;
 
 
 
-
-
-
-
-
-
-
-
-
 .cardsservicios ul li {
   text-transform: uppercase;
   /* Puedes agregar otros estilos si quieres */
@@ -698,4 +878,123 @@ color: #fff;
 /* Anulamos la transformación solo para el span que contiene el texto entre paréntesis */
 .services-list6 li .no-transform {
   text-transform: none;
+}
+/* Móvil: apilar en columna  footer*/
+@media (max-width: 800px) {
+  .seccionfooter {
+    flex-direction: column;          /* apila los items */
+    row-gap: 0.7rem;                 /* espacio vertical uniforme */
+    padding: 1.2rem 0.5rem;
+    text-align: center;
+  }
+}
+
+
+/* Estilos por defecto (desktop) */
+.solo-gif-slider .gif-caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+}
+.solo-gif-slider .gif-caption h5 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;    /* tamaño desktop */
+  line-height: 1.2;
+}
+.solo-gif-slider .gif-caption p {
+  margin: 0;
+  font-size: 1rem;      /* tamaño desktop */
+}
+
+/* Ajustes responsive para pantallas < 768px */
+@media (max-width: 767px) {
+  .solo-gif-slider .gif-caption {
+    bottom: 0.5rem;             /* un poco más abajo */
+    padding: 0.25rem 0.5rem;    /* menos padding */
+    width: 90%;                 /* que no ocupe todo el ancho */
+  }
+  .solo-gif-slider .gif-caption h5 {
+    font-size: .9375rem;     /* más pequeño */
+    line-height: 1.1;
+  }
+  .solo-gif-slider .gif-caption p {
+    font-size: .625rem;  /* más pequeño */
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Apilar todo el banner en columna */
+  .banner-clientes {
+    flex-direction: column;
+ margin-bottom: 20px !important;
+    border-radius: 1rem;
+    max-width: 100%;
+    margin: 1rem 0.5rem;
+  }
+
+  /* Ajustar el área de texto */
+  .banner-texto {
+    padding: 1.2rem;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+  }
+
+  /* El contenedor de logos ocupa todo el ancho y altura suficiente */
+  .banner-logos {
+    min-height: 12.5rem;
+    padding: 1rem 0;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Cada grupo pasa a columna y se centra */
+  .logo-group {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+  }
+
+  /* Logos más pequeños y responsivos */
+  .logo-group img {
+    max-width: 80px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0.25rem 0;
+  }
+}
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .valor-item .icono {
+    font-size: 2.5rem;
+  }
+  .valor-titulo {
+    font-size: 1.1rem;
+  }
+  .valor-texto {
+    font-size: 0.9rem;
+  }
+}
+
+.sin-viñeta {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.sin-viñeta {
+ padding: .75rem 1rem  !important;
 }
